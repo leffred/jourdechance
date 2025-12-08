@@ -1,41 +1,52 @@
 ﻿---
-const currentYear = new Date().getFullYear();
+// Footer.astro
+const year = new Date().getFullYear();
 ---
-
-<footer class="bg-gray-900 text-white mt-auto">
-  <div class="max-w-6xl mx-auto px-4 py-12">
-    <div class="grid md:grid-cols-3 gap-8 mb-8">
+<footer class="bg-slate-900 text-white mt-auto border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
       
-      <div>
-        <h3 class="text-xl font-bold mb-4">Jour de <span class="text-teal-400">Chance</span></h3>
-        <p class="text-gray-400 text-sm">
-          Transformez vos opportunités en succès. 
-          Expertise digitale et stratégique pour votre croissance.
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+           <span class="text-2xl font-bold text-white">Jour de <span class="text-teal-400">Chance</span></span>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-xs">
+          Nous transformons vos opportunités en succès grâce à une expertise digitale de pointe.
         </p>
       </div>
 
       <div>
-        <h4 class="font-bold mb-4 text-gray-200">Navigation</h4>
-        <ul class="space-y-2 text-sm text-gray-400">
-          <li><a href="/" class="hover:text-teal-400 transition">Accueil</a></li>
-          <li><a href="/services" class="hover:text-teal-400 transition">Nos Services</a></li>
-          <li><a href="/a-propos" class="hover:text-teal-400 transition">À Propos</a></li>
-          <li><a href="/contact" class="hover:text-teal-400 transition">Contact</a></li>
+        <h3 class="text-sm font-semibold text-teal-400 uppercase tracking-wider mb-4">Navigation</h3>
+        <ul class="space-y-3">
+          <li><a href="/" class="text-slate-300 hover:text-white transition-colors">Accueil</a></li>
+          <li><a href="/services" class="text-slate-300 hover:text-white transition-colors">Nos Services</a></li>
+          <li><a href="/a-propos" class="text-slate-300 hover:text-white transition-colors">Qui sommes-nous ?</a></li>
+          <li><a href="/contact" class="text-slate-300 hover:text-white transition-colors">Contact</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="font-bold mb-4 text-gray-200">Contact</h4>
-        <ul class="space-y-2 text-sm text-gray-400">
-          <li>Paris, France</li>
-          <li><a href="mailto:contact@jourdechance.com" class="hover:text-teal-400 transition">contact@jourdechance.com</a></li>
+        <h3 class="text-sm font-semibold text-teal-400 uppercase tracking-wider mb-4">Nous contacter</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-slate-300">
+            <span>📧</span>
+            <a href="mailto:contact@jourdechance.com" class="hover:text-white transition-colors">contact@jourdechance.com</a>
+          </li>
+          <li class="flex items-start gap-3 text-slate-300">
+            <span>📍</span>
+            <span>Paris, France</span>
+          </li>
         </ul>
       </div>
 
     </div>
 
-    <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
-      &copy;  Jour de Chance. Tous droits réservés.
+    <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+      <p>&copy;  Jour de Chance. Tous droits réservés.</p>
+      <div class="flex gap-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-slate-300 transition-colors">Mentions Légales</a>
+        <a href="#" class="hover:text-slate-300 transition-colors">Confidentialité</a>
+      </div>
     </div>
   </div>
 </footer>
