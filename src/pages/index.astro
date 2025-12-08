@@ -3,31 +3,38 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<main class="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-6">
-		
-		<div class="max-w-md w-full bg-white shadow-xl rounded-2xl p-8 text-center border border-gray-100">
-			
-			<span class="inline-block bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold tracking-wide mb-6">
-				Bientôt disponible
-			</span>
+  <main class="min-h-screen flex items-center justify-center bg-gray-50 p-4">
+    
+    <div class="bg-white p-10 rounded-3xl shadow-2xl max-w-lg w-full text-center border border-gray-100 relative overflow-hidden">
+      
+      <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-teal-300 to-teal-500"></div>
 
-			<h1 class="text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
-				Jour de Chance
-			</h1>
+      <img src="/logo.png" alt="Logo Jour de Chance" class="mx-auto w-40 mb-8 rounded-2xl" />
+      
+      <span class="inline-block bg-teal-50 text-teal-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-6 border border-teal-100">
+        Prochainement
+      </span>
 
-			<p class="text-slate-600 text-lg mb-8 leading-relaxed">
-				Nous réinventons notre expérience en ligne.
-				<br>Soyez prêt pour le changement.
-			</p>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4 leading-tight">
+        Jour de <span class="text-teal-500">Chance</span>
+      </h1>
 
-			<a href="mailto:contact@jourdechance.com" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg">
-				Nous contacter
-			</a>
+      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+        Votre nouvelle dose de chance arrive bientôt. 
+        <br>Une expérience repensée pour vous.
+      </p>
 
-			<p class="mt-6 text-xs text-gray-400">
-				© 2025 Jour de Chance. Tous droits réservés.
-			</p>
+      <a
+        href="mailto:contact@jourdechance.com"
+        class="inline-block w-full sm:w-auto bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-8 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+      >
+        Être notifié du lancement
+      </a>
 
-		</div>
-	</main>
+      <p class="text-sm text-gray-400 mt-10">
+        © 2025 Jour de Chance.
+      </p>
+
+    </div>
+  </main>
 </Layout>
