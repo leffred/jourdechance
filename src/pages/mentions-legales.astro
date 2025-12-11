@@ -1,0 +1,78 @@
+﻿---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Mentions Légales | Jour de Chance" description="Informations légales et juridiques de l'agence Jour de Chance.">
+  <Header />
+
+  <main class="bg-slate-50 py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-4xl font-bold text-gray-900 mb-12 text-center">Mentions Légales</h1>
+
+      <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 space-y-10 text-gray-600 leading-relaxed">
+        
+        <section>
+          <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <span class="text-teal-500">1.</span> Éditeur du site
+          </h2>
+          <p>
+            Le site <strong>jourdechance.com</strong> est édité par la société <strong>JOUR DE CHANCE</strong>, 
+            Société par Actions Simplifiée (SAS) au capital de 1 000 euros.
+          </p>
+          <ul class="mt-4 space-y-2 list-disc pl-5">
+            <li><strong>Siège social :</strong> 67 Avenue Pierre Grenier, 92100 Boulogne-Billancourt, France.</li>
+            <li><strong>Immatriculation :</strong> Inscrite au RCS de Nanterre sous le numéro 839 826 317.</li>
+            <li><strong>Numéro de TVA Intracommunautaire :</strong> FR46839826317</li>
+            <li><strong>Directeur de la publication :</strong> M. Frédéric LEFEBVRE (Président).</li>
+            <li><strong>Contact :</strong> <a href="mailto:contact@jourdechance.com" class="text-teal-600 hover:underline">contact@jourdechance.com</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <span class="text-teal-500">2.</span> Hébergement
+          </h2>
+          <p>
+            Ce site est hébergé sur l'infrastructure Cloud de <strong>Google Cloud Platform</strong> (via Google Cloud Run), 
+            avec un déploiement continu assuré par <strong>GitHub</strong>.
+          </p>
+          <div class="mt-4 text-sm bg-gray-50 p-4 rounded-xl border border-gray-200">
+            <strong>Hébergeur :</strong> Google Ireland Limited<br>
+            Gordon House, Barrow Street, Dublin 4, Irlande.<br>
+            <a href="https://cloud.google.com/" target="_blank" rel="nofollow" class="underline">https://cloud.google.com/</a>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <span class="text-teal-500">3.</span> Propriété Intellectuelle
+          </h2>
+          <p>
+            L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. 
+            Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
+            La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse du directeur de la publication.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <span class="text-teal-500">4.</span> Données Personnelles (RGPD)
+          </h2>
+          <p>
+            Les informations recueillies via le formulaire de contact (Nom, Email, Message) sont enregistrées dans un fichier informatisé par <strong>Jour de Chance</strong> pour la gestion de notre clientèle.
+            Elles sont conservées pendant une durée de 3 ans et sont destinées uniquement au service commercial établi dans l'Union Européenne.
+          </p>
+          <p class="mt-4">
+            Conformément à la loi « informatique et libertés », vous pouvez exercer votre droit d'accès aux données vous concernant et les faire rectifier en contactant : 
+            <a href="mailto:contact@jourdechance.com" class="text-teal-600 hover:underline">contact@jourdechance.com</a>.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
