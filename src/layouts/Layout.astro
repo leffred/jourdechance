@@ -1,31 +1,52 @@
----
+﻿---
 import '../global.css';
 
-// 1. On définit les variables que chaque page devra fournir
 interface Props {
-	title: string;
-	description?: string; // Le ? veut dire que c'est optionnel
+    title: string;
+    description?: string;
 }
 
-// 2. On récupère les valeurs envoyées par la page
-const { title, description = "Jour de Chance - Expert en opportunités." } = Astro.props;
+const { title, description = "Jour de Chance - Agence Média pour Startups & Scale-ups. Offline & Online." } = Astro.props;
+
+// 👇 REMPLACE CI-DESSOUS PAR TON VRAI ID GTM 👇
+const GTM_ID = "GTM-W5ZVWGG6"; 
 ---
 
 <!doctype html>
-<html lang="fr"> <head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:type" content="website" />
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="fr">
+    <head>
+        <script is:inline define:vars={{ GTM_ID }}>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer',GTM_ID);
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        
+        <meta name="geo.region" content="FR-92" />
+        <meta name="geo.placename" content="Boulogne-Billancourt" />
+        <meta name="geo.position" content="48.8317;2.2575" />
+        <meta name="ICBM" content="48.8317, 2.2575" />
+
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://jourdechance.com/logo.png" />
+        <meta property="og:locale" content="fr_FR" />
+    </head>
+    <body>
+        <noscript>
+            <iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <slot />
+    </body>
 </html>
