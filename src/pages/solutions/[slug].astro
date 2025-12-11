@@ -1,0 +1,152 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const solutions = [
+    {
+      slug: "tv-ctv",
+      category: "Mass Media & Innovation",
+      title: "TV & TV Connectée (CTV)",
+      subtitle: "La puissance du petit écran, la précision du digital.",
+      description: "Accédez au média le plus puissant pour booster votre notoriété. Grâce à la CTV, ciblez précisément vos audiences TV sans les budgets du Big 5.",
+      icon: "📺",
+      benefits: [
+        { title: "Accessibilité", text: "Campagnes segmentées accessibles dès 5k€." },
+        { title: "Ciblage Data", text: "Utilisez la donnée FAI pour toucher les bons foyers." },
+        { title: "Mesure", text: "Suivi des visites site web suite aux spots (Drive-to-Web)." }
+      ],
+      content: "La TV n'est plus réservée aux multinationales. Avec l'avènement de la TV Connectée (CTV) et de la TV segmentée, Jour de Chance permet aux startups de diffuser sur les plus grandes chaînes (TF1, M6, Canal+) avec une précision géographique et démographique redoutable."
+    },
+    {
+      slug: "ooh-dooh",
+      category: "Visibilité Urbaine",
+      title: "Affichage (OOH) & Digital (DOOH)",
+      subtitle: "Soyez visible là où vos clients vivent et se déplacent.",
+      description: "Du métro parisien aux écrans digitaux dans les gares. Une visibilité tactique pour ancrer votre marque dans le quotidien.",
+      icon: "🏙️",
+      benefits: [
+        { title: "Flexibilité", text: "Achat programmatique sur le DOOH (à l'heure/lieu)." },
+        { title: "Impact", text: "Formats événementiels et couverture nationale." },
+        { title: "Drive-to-Store", text: "Ciblez les zones de chalandise stratégiques." }
+      ],
+      content: "L'affichage reste le média de la confiance et de la stature. Nous mixons l'affichage papier classique (OOH) pour la couverture de masse avec le Digital (DOOH) pour scénariser vos messages selon l'heure de la journée ou la météo."
+    },
+    {
+      slug: "social-vol",
+      category: "Digital & Performance",
+      title: "Social Ads & Vidéo Online (VOL)",
+      subtitle: "Captiver, Engager, Convertir.",
+      description: "TikTok, Instagram, YouTube, LinkedIn. Nous créons des campagnes qui arrêtent le scroll et génèrent du business.",
+      icon: "📱",
+      benefits: [
+        { title: "Créativité", text: "Production de contenus natifs (UGC, Reels)." },
+        { title: "A/B Testing", text: "Optimisation continue des performances." },
+        { title: "Retargeting", text: "Ne perdez aucun prospect en route." }
+      ],
+      content: "Ce n'est pas juste du sponsoring de post. C'est une stratégie d'acquisition complète. Nous gérons vos campagnes VOL (Vidéo Online) sur les plateformes de replay et Social Ads pour maximiser votre coût d'acquisition (CAC)."
+    },
+    {
+      slug: "search-seo",
+      category: "Intention & Local",
+      title: "Search (SEA), SEO & GEO",
+      subtitle: "Captez l'intention d'achat au moment T.",
+      description: "Soyez le premier résultat quand on vous cherche. Une approche data-driven pour dominer Google et le référencement local.",
+      icon: "🔍",
+      benefits: [
+        { title: "Protection de marque", text: "Verrouillez votre nom contre la concurrence." },
+        { title: "SEO Technique", text: "Optimisation de votre site pour le ranking." },
+        { title: "Géomarketing", text: "Attirez les clients dans votre zone." }
+      ],
+      content: "Le Search est le filet de sécurité de votre croissance. Nous combinons l'achat de mots-clés (SEA) pour des résultats immédiats avec une stratégie SEO long terme et du Géomarketing pour vos points de vente physiques."
+    },
+    {
+      slug: "radio-audio",
+      category: "Audio & Intimité",
+      title: "Radio & Audio Digital",
+      subtitle: "L'intimité de la voix, la puissance de la répétition.",
+      description: "Radio hertzienne pour le trafic, Podcasts et Streaming pour le ciblage affinitaire. Entrez dans les oreilles de vos prospects.",
+      icon: "📻",
+      benefits: [
+        { title: "Mémorisation", text: "Le média avec le meilleur taux de rétention." },
+        { title: "Trafic", text: "Générateur immédiat de visites web et magasin." },
+        { title: "Ciblage Podcast", text: "Touchez des communautés engagées." }
+      ],
+      content: "L'audio vit une renaissance. Entre la puissance de la radio le matin et l'engagement des podcasts la journée, nous construisons des plans audio qui installent votre marque dans le quotidien de vos cibles."
+    }
+  ];
+
+  return solutions.map(solution => ({
+    params: { slug: solution.slug },
+    props: { solution },
+  }));
+}
+
+const { solution } = Astro.props;
+---
+
+<Layout title={solution.title + " | Jour de Chance"} description={solution.description}>
+  <Header />
+
+  <section class="bg-slate-50 py-20 border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="inline-block p-4 bg-white rounded-2xl shadow-sm mb-6 text-4xl">
+        {solution.icon}
+      </div>
+      <span class="block text-teal-600 font-bold tracking-wider uppercase text-sm mb-2">{solution.category}</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+        {solution.title}
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        {solution.subtitle}
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Notre Approche</h2>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+          {solution.content}
+        </p>
+        <div class="bg-teal-50 border-l-4 border-teal-500 p-6 rounded-r-xl">
+          <p class="text-teal-800 font-medium">
+            "Chez Jour de Chance, nous rendons ce canal accessible aux startups en cassant les barrières à l'entrée (coûts, délais, créa)."
+          </p>
+        </div>
+      </div>
+
+      <div class="grid gap-6">
+        {solution.benefits.map(benefit => (
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 hover:shadow-md transition">
+            <div class="mt-1 flex-shrink-0 w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold">✓</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">{benefit.title}</h3>
+              <p class="text-sm text-gray-500">{benefit.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-gray-900 py-16 text-center">
+     <div class="max-w-3xl mx-auto px-4">
+       <h2 class="text-3xl font-bold text-white mb-6">Prêt à activer le levier {solution.title} ?</h2>
+       <div class="flex flex-col sm:flex-row gap-4 justify-center">
+         <a href="/contact" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-8 rounded-full transition-all shadow-lg hover:scale-105">
+           Demander un devis {solution.title}
+         </a>
+         <a href="/services" class="inline-block bg-transparent border border-gray-700 text-gray-300 hover:text-white hover:border-white font-bold py-4 px-8 rounded-full transition-all">
+           Voir les autres expertises
+         </a>
+       </div>
+     </div>
+  </section>
+
+  <Footer />
+</Layout>
