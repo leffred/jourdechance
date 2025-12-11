@@ -3,17 +3,90 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
-<Layout title="Qui sommes-nous ? | Jour de Chance" description="Notre histoire et nos valeurs.">
+
+<Layout title="Qui sommes-nous ? | Jour de Chance" description="Notre histoire, nos valeurs et notre vision.">
   <Header />
-  <main class="max-w-6xl mx-auto px-4 py-16 min-h-[60vh]">
-    <div class="max-w-3xl mx-auto text-center">
-      <span class="text-teal-600 font-bold tracking-wider uppercase text-sm">Notre Histoire</span>
-      <h1 class="text-4xl font-bold text-gray-900 mt-2 mb-6">Provoquer la Chance</h1>
-      <p class="text-xl text-gray-600 leading-relaxed mb-8">
-        Chez Jour de Chance, nous ne croyons pas au hasard. 
-        Nous analysons les données, structurons les processus et déployons des outils technologiques pour transformer chaque opportunité en réussite concrète.
+
+  <section class="bg-white py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <span class="text-teal-600 font-bold tracking-wider uppercase text-sm">Notre ADN</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-8 leading-tight">
+        Nous ne croyons pas au hasard.<br>
+        <span class="text-teal-500">Nous construisons la chance.</span>
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Jour de Chance est née d'un constat simple : les opportunités ne manquent pas, c'est la capacité à les saisir qui fait la différence. 
+        Nous accompagnons les entreprises pour transformer leur potentiel dormant en croissance active.
       </p>
     </div>
-  </main>
+  </section>
+
+  <section class="bg-slate-50 py-20 border-y border-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900">Nos Piliers</h2>
+        <p class="text-gray-500 mt-4">Ce qui guide chacune de nos actions.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">📊</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">La Data avant tout</h3>
+          <p class="text-gray-600">
+            Pas d'intuition floue. Nous basons nos stratégies sur des données tangibles et des analyses précises.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">🤝</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Transparence Totale</h3>
+          <p class="text-gray-600">
+            Vous savez ce que nous faisons, pourquoi nous le faisons, et quels résultats cela génère. Sans jargon.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">🚀</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Culture du Résultat</h3>
+          <p class="text-gray-600">
+            Une belle stratégie ne sert à rien si elle ne convertit pas. Nous sommes obsédés par votre ROI.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+      <div class="w-full md:w-1/2">
+        <div class="bg-gray-200 rounded-2xl h-80 w-full flex items-center justify-center text-gray-400">
+            <span>Photo Fondateur / Équipe</span>
+        </div>
+      </div>
+      
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Une vision pragmatique</h2>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          "Après des années à observer des entreprises passer à côté de leurs opportunités faute d'outils adaptés, j'ai créé Jour de Chance pour apporter une réponse technique et stratégique."
+        </p>
+        <div class="flex items-center gap-4">
+           <div class="w-12 h-1 bg-teal-500 rounded-full"></div>
+           <span class="font-bold text-gray-900">Le Fondateur</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-900 py-16 text-center">
+     <div class="max-w-4xl mx-auto px-4">
+       <h2 class="text-3xl font-bold text-white mb-6">Envie de travailler avec nous ?</h2>
+       <a href="/contact" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg hover:shadow-teal-500/50">
+         Contactez l'équipe
+       </a>
+     </div>
+  </section>
+
   <Footer />
 </Layout>
