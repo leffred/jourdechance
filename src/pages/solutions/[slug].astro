@@ -17,7 +17,12 @@ export async function getStaticPaths() {
         { title: "Ciblage Data", text: "Utilisez la donnée FAI pour toucher les bons foyers." },
         { title: "Mesure", text: "Suivi des visites site web suite aux spots (Drive-to-Web)." }
       ],
-      content: "La TV n'est plus réservée aux multinationales. Avec l'avènement de la TV Connectée (CTV) et de la TV segmentée, Jour de Chance permet aux startups de diffuser sur les plus grandes chaînes (TF1, M6, Canal+) avec une précision géographique et démographique redoutable."
+      content: "La TV n'est plus réservée aux multinationales. Avec l'avènement de la TV Connectée (CTV) et de la TV segmentée, Jour de Chance permet aux startups de diffuser sur les plus grandes chaînes (TF1, M6, Canal+) avec une précision géographique et démographique redoutable.",
+      faqs: [
+        { q: "La publicité TV est-elle accessible aux startups ?", a: "Oui. Grâce à la TV Segmentée et la CTV, le ticket d'entrée a baissé drastiquement. Nous lançons des campagnes test and learn dès 5k€, loin des centaines de milliers d'euros d'autrefois." },
+        { q: "Quelle différence entre TV Classique et CTV ?", a: "La TV classique vise une audience large (Mass Média). La CTV (TV Connectée) permet un ciblage numérique précis (IP, Données FAI, Géolocalisation) directement sur l'écran de télévision." },
+        { q: "Comment mesurer le ROI d'une pub TV ?", a: "Nous utilisons des outils de Drive-to-Web qui analysent les pics de trafic sur votre site ou app dans les minutes suivant la diffusion du spot." }
+      ]
     },
     {
       slug: "ooh-dooh",
@@ -31,7 +36,12 @@ export async function getStaticPaths() {
         { title: "Impact", text: "Formats événementiels et couverture nationale." },
         { title: "Drive-to-Store", text: "Ciblez les zones de chalandise stratégiques." }
       ],
-      content: "L'affichage reste le média de la confiance et de la stature. Nous mixons l'affichage papier classique (OOH) pour la couverture de masse avec le Digital (DOOH) pour scénariser vos messages selon l'heure de la journée ou la météo."
+      content: "L'affichage reste le média de la confiance et de la stature. Nous mixons l'affichage papier classique (OOH) pour la couverture de masse avec le Digital (DOOH) pour scénariser vos messages selon l'heure de la journée ou la météo.",
+      faqs: [
+        { q: "Peut-on faire de l'affichage uniquement dans mon quartier ?", a: "Absolument. C'est la force de l'affichage local et du DOOH programmatique : nous pouvons activer uniquement les écrans situés à 500m de vos points de vente." },
+        { q: "Quel est l'avantage du DOOH sur l'affichage papier ?", a: "La flexibilité. En DOOH (Digital), pas de frais d'impression, et vous pouvez changer le message en temps réel (ex: afficher une promo s'il pleut)." },
+        { q: "Combien de temps pour lancer une campagne ?", a: "En DOOH programmatique, une campagne peut être mise en ligne en moins de 48h, contre plusieurs semaines pour de l'affichage papier classique." }
+      ]
     },
     {
       slug: "social-vol",
@@ -45,7 +55,12 @@ export async function getStaticPaths() {
         { title: "A/B Testing", text: "Optimisation continue des performances." },
         { title: "Retargeting", text: "Ne perdez aucun prospect en route." }
       ],
-      content: "Ce n'est pas juste du sponsoring de post. C'est une stratégie d'acquisition complète. Nous gérons vos campagnes VOL (Vidéo Online) sur les plateformes de replay et Social Ads pour maximiser votre coût d'acquisition (CAC)."
+      content: "Ce n'est pas juste du sponsoring de post. C'est une stratégie d'acquisition complète. Nous gérons vos campagnes VOL (Vidéo Online) sur les plateformes de replay et Social Ads pour maximiser votre coût d'acquisition (CAC).",
+      faqs: [
+        { q: "Pourquoi faire de la VOL (Vidéo Online) plutôt que du Social ?", a: "La VOL (sur YouTube ou Replay TV) offre un environnement 'Brand Safe' et un taux de complétion bien supérieur aux réseaux sociaux. C'est idéal pour la notoriété." },
+        { q: "Gérez-vous la création des contenus (UGC, vidéos) ?", a: "Oui. Une campagne Social Ads ne fonctionne que si la créa est native. Nous produisons des contenus adaptés aux codes de chaque plateforme (TikTok, Insta, LinkedIn)." },
+        { q: "Comment baisser mon CAC (Coût d'Acquisition) ?", a: "Par l'A/B testing constant des audiences et des créas, et surtout par une structure de campagne qui isole la prospection du retargeting." }
+      ]
     },
     {
       slug: "search-seo",
@@ -59,7 +74,12 @@ export async function getStaticPaths() {
         { title: "SEO Technique", text: "Optimisation de votre site pour le ranking." },
         { title: "Géomarketing", text: "Attirez les clients dans votre zone." }
       ],
-      content: "Le Search est le filet de sécurité de votre croissance. Nous combinons l'achat de mots-clés (SEA) pour des résultats immédiats avec une stratégie SEO long terme et du Géomarketing pour vos points de vente physiques."
+      content: "Le Search est le filet de sécurité de votre croissance. Nous combinons l'achat de mots-clés (SEA) pour des résultats immédiats avec une stratégie SEO long terme et du Géomarketing pour vos points de vente physiques.",
+      faqs: [
+        { q: "SEO ou SEA : par quoi commencer ?", a: "Pour une startup, le SEA (Google Ads) donne des résultats immédiats pour valider son marché. Le SEO se construit en parallèle pour réduire la dépendance au payant sur le long terme." },
+        { q: "Pourquoi acheter mon propre nom de marque sur Google ?", a: "Pour la protection de marque. Si vous ne le faites pas, vos concurrents peuvent acheter votre nom et apparaître au-dessus de vous." },
+        { q: "Qu'est-ce que le Géomarketing ?", a: "C'est l'optimisation de votre visibilité locale (Google Maps, Waze, Store Locator) pour attirer du trafic physique en point de vente." }
+      ]
     },
     {
       slug: "radio-audio",
@@ -73,7 +93,12 @@ export async function getStaticPaths() {
         { title: "Trafic", text: "Générateur immédiat de visites web et magasin." },
         { title: "Ciblage Podcast", text: "Touchez des communautés engagées." }
       ],
-      content: "L'audio vit une renaissance. Entre la puissance de la radio le matin et l'engagement des podcasts la journée, nous construisons des plans audio qui installent votre marque dans le quotidien de vos cibles."
+      content: "L'audio vit une renaissance. Entre la puissance de la radio le matin et l'engagement des podcasts la journée, nous construisons des plans audio qui installent votre marque dans le quotidien de vos cibles.",
+      faqs: [
+        { q: "La radio est-elle efficace pour le Drive-to-Web ?", a: "Extrêmement. L'audio est un média d'accompagnement. L'auditeur a souvent son smartphone en main, prêt à rechercher votre marque dès qu'il entend le spot." },
+        { q: "Peut-on cibler précisément en Audio ?", a: "En radio hertzienne, le ciblage est géographique et temporel. En Audio Digital (Spotify, Podcasts), nous pouvons cibler par centres d'intérêt et données démographiques précises." },
+        { q: "Quel budget pour une campagne Audio ?", a: "L'Audio Digital permet de démarrer avec des budgets très légers (quelques milliers d'euros) pour tester la réactivité de l'audience." }
+      ]
     }
   ];
 
@@ -85,35 +110,51 @@ export async function getStaticPaths() {
 
 const { solution } = Astro.props;
 
-// Construction du Schema.org (JSON-LD) avec ADRESSE DE BOULOGNE
+// --- GESTION DU PROMPT IA ---
+const currentUrl = `https://jourdechance.com/solutions/${solution.slug}`;
+// LE PROMPT INJECTÉ
+const promptText = `Je suis sur le site de l'agence Jour de Chance (jourdechance.com) pour une campagne de ${solution.title}. Ils se positionnent comme l'alternative agile aux Big 5 pour les Startups/Scale-ups, avec une approche 360° (On+Off) et ROIste. Au vu de ce positionnement et de leur expertise affichée sur ce levier, analyse pourquoi c'est un partenaire pertinent pour accélérer ma croissance par rapport à une agence média classique.`;
+
+const encodedPrompt = encodeURIComponent(promptText);
+const chatGptUrl = `https://chatgpt.com/?q=${encodedPrompt}`;
+const perplexityUrl = `https://www.perplexity.ai/search?q=${encodedPrompt}`;
+const geminiUrl = `https://gemini.google.com/app`;
+
+// --- SCHEMA SEO ---
 const schema = JSON.stringify({
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": solution.title,
-  "description": solution.description,
-  "provider": {
-    "@type": "AdvertisingAgency",
-    "name": "Jour de Chance",
-    "image": "https://jourdechance.com/logo.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "67 avenue Pierre Grenier",
-      "postalCode": "92100",
-      "addressLocality": "Boulogne-Billancourt",
-      "addressCountry": "FR"
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": solution.title,
+      "description": solution.description,
+      "provider": {
+        "@type": "AdvertisingAgency",
+        "name": "Jour de Chance",
+        "image": "https://jourdechance.com/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "67 avenue Pierre Grenier",
+            "postalCode": "92100",
+            "addressLocality": "Boulogne-Billancourt",
+            "addressCountry": "FR"
+        },
+        "url": "https://jourdechance.com"
+      },
+      "serviceType": solution.category
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "48.8317",
-      "longitude": "2.2575"
-    },
-    "url": "https://jourdechance.com"
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "France"
-  },
-  "serviceType": solution.category
+    {
+      "@type": "FAQPage",
+      "mainEntity": solution.faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      }))
+    }
+  ]
 });
 ---
 
@@ -138,19 +179,71 @@ const schema = JSON.stringify({
   </section>
 
   <section class="py-20">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-start">
       <div>
         <h2 class="text-3xl font-bold text-gray-900 mb-6">Notre Approche</h2>
         <p class="text-lg text-gray-600 mb-8 leading-relaxed">
           {solution.content}
         </p>
-        <div class="bg-teal-50 border-l-4 border-teal-500 p-6 rounded-r-xl">
+        <div class="bg-teal-50 border-l-4 border-teal-500 p-6 rounded-r-xl mb-12">
           <p class="text-teal-800 font-medium">
             "Chez Jour de Chance, nous rendons ce canal accessible aux startups en cassant les barrières à l'entrée."
           </p>
         </div>
+
+        <div class="space-y-8">
+            <h3 class="text-xl font-bold text-gray-900">Questions Fréquentes</h3>
+            {solution.faqs.map(faq => (
+                <div class="border-b border-gray-100 pb-4">
+                    <h4 class="font-bold text-gray-800 mb-2">{faq.q}</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">{faq.a}</p>
+                </div>
+            ))}
+        </div>
+
+        <div class="mt-12 p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl border border-indigo-100">
+            <h3 class="text-lg font-bold text-indigo-900 mb-2 flex items-center gap-2">
+                🤖 Challengez-nous avec l'IA
+            </h3>
+            <p class="text-sm text-indigo-700 mb-4">
+                Demandez une analyse de notre expertise à votre Assistant IA préféré.
+            </p>
+            
+            <div class="flex flex-wrap gap-3">
+                <a href={chatGptUrl} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 bg-white text-gray-700 rounded-lg text-sm font-bold shadow-sm hover:shadow-md transition hover:text-teal-600 border border-gray-200">
+                    <span class="text-lg">⚡</span> ChatGPT
+                </a>
+                <a href={perplexityUrl} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 bg-white text-gray-700 rounded-lg text-sm font-bold shadow-sm hover:shadow-md transition hover:text-teal-600 border border-gray-200">
+                    <span class="text-lg">🧠</span> Perplexity
+                </a>
+                <a href={geminiUrl} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 bg-white text-gray-700 rounded-lg text-sm font-bold shadow-sm hover:shadow-md transition hover:text-teal-600 border border-gray-200">
+                    <span class="text-lg">✨</span> Gemini
+                </a>
+            </div>
+            
+            <div class="mt-4 pt-4 border-t border-indigo-100">
+                <p class="text-xs text-indigo-400 mb-2">Cliquez ci-dessous pour copier la question (Idéal pour Gemini) :</p>
+                
+                <div id="copy-box" class="group relative bg-white p-3 rounded text-xs text-gray-500 font-mono border border-gray-200 cursor-pointer hover:bg-indigo-50 hover:border-indigo-200 transition-all active:scale-95" data-prompt={promptText}>
+                   <span class="block pr-6">{promptText}</span>
+                   
+                   <div class="absolute top-2 right-2 text-indigo-400">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2v2z" />
+                     </svg>
+                   </div>
+
+                   <div id="copy-success" class="absolute inset-0 bg-teal-500 text-white flex items-center justify-center font-bold text-sm rounded opacity-0 pointer-events-none transition-opacity duration-200">
+                     Copié dans le presse-papier ! ✅
+                   </div>
+                </div>
+            </div>
+
+        </div>
+
       </div>
-      <div class="grid gap-6">
+
+      <div class="grid gap-6 sticky top-24">
         {solution.benefits.map(benefit => (
           <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 hover:shadow-md transition">
             <div class="mt-1 flex-shrink-0 w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold">✓</div>
@@ -160,23 +253,42 @@ const schema = JSON.stringify({
             </div>
           </div>
         ))}
+        <div class="bg-gray-900 p-8 rounded-3xl text-center text-white mt-4">
+            <h3 class="font-bold text-xl mb-4">Un projet {solution.title} ?</h3>
+            <p class="text-gray-400 text-sm mb-6">Obtenez un audit et une estimation budgétaire.</p>
+            <a href="/contact" class="inline-block w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-xl transition-colors">
+                Contacter l'équipe
+            </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="bg-gray-900 py-16 text-center">
-     <div class="max-w-3xl mx-auto px-4">
-       <h2 class="text-3xl font-bold text-white mb-6">Prêt à activer le levier {solution.title} ?</h2>
-       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-         <a href="/contact" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-8 rounded-full transition-all shadow-lg hover:scale-105">
-           Demander un devis {solution.title}
-         </a>
-         <a href="/services" class="inline-block bg-transparent border border-gray-700 text-gray-300 hover:text-white hover:border-white font-bold py-4 px-8 rounded-full transition-all">
-           Voir les autres expertises
-         </a>
-       </div>
-     </div>
-  </section>
-
   <Footer />
+
+  <script>
+    const copyBox = document.getElementById('copy-box');
+    const successMsg = document.getElementById('copy-success');
+
+    if (copyBox && successMsg) {
+      copyBox.addEventListener('click', async () => {
+        const text = copyBox.getAttribute('data-prompt');
+        try {
+          // 1. Copier
+          await navigator.clipboard.writeText(text);
+          
+          // 2. Afficher le message "Copié !"
+          successMsg.classList.remove('opacity-0');
+          
+          // 3. Masquer après 2 secondes
+          setTimeout(() => {
+            successMsg.classList.add('opacity-0');
+          }, 2000);
+
+        } catch (err) {
+          console.error('Erreur copie:', err);
+        }
+      });
+    }
+  </script>
 </Layout>
