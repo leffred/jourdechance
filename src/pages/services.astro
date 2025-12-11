@@ -4,128 +4,88 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Services & Expertise | Jour de Chance" description="L'agence média agile pour transformer les Startups en Scale-ups. Offline & Online.">
+<Layout title="Nos Services | Jour de Chance" description="L'agence média agile pour transformer les Startups en Scale-ups. Offline & Online.">
   <Header />
 
   <section class="bg-slate-50 py-24 border-b border-gray-100">
     <div class="max-w-5xl mx-auto px-4 text-center">
       <span class="inline-block py-1 px-3 rounded-full bg-teal-100 text-teal-700 text-xs font-bold tracking-wide uppercase mb-6">
-        Depuis 2018
+        Agence Média 360°
       </span>
       <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
-        L'agence média qui fait passer<br>
-        <span class="text-teal-500">vos campagnes à l'échelle.</span>
+        Tous les leviers de croissance<br>
+        <span class="text-teal-500">activables en 48h.</span>
       </h1>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-        L'agilité d'une structure indépendante, la puissance d'une agence 360°.
-        <br><strong>TV, Affichage, Digital :</strong> Nous activons tous les leviers pour accélérer votre croissance, sans la lourdeur des grands réseaux.
+        Ne choisissez plus entre la puissance de la TV et la précision du Digital.
+        <br>Nous orchestrons vos campagnes sur tous les canaux pour saturer votre zone de chalandise.
       </p>
-      <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold text-gray-400 uppercase tracking-wider">
-        <span>• Facile</span>
-        <span>• Rapide</span>
-        <span>• Compétitif</span>
-      </div>
     </div>
   </section>
 
   <section class="py-20">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-3 gap-8">
-        
-        <div class="bg-white p-8 rounded-3xl shadow-lg shadow-gray-100 border border-gray-50 hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group">
-          <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-            <span class="text-9xl font-bold text-teal-900">1</span>
-          </div>
-          
-          <div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center mb-6 text-teal-600">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Stratégie & Agilité</h3>
-          <p class="text-gray-600 mb-6 leading-relaxed">
-            Fini les processus lourds des agences traditionnelles. Nous comprenons les enjeux des Startups : il faut aller vite et viser juste. Nous concevons votre plan média avec réactivité.
-          </p>
-          <ul class="space-y-3 text-sm font-medium text-gray-500">
-            <li class="flex items-center gap-3"><span class="text-teal-500 text-lg">✓</span> Audit & Reco en temps record</li>
-            <li class="flex items-center gap-3"><span class="text-teal-500 text-lg">✓</span> Interlocuteur unique & dédié</li>
-            <li class="flex items-center gap-3"><span class="text-teal-500 text-lg">✓</span> Outils de pilotage simplifiés</li>
-          </ul>
-        </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+         
+         <a href="/solutions/tv-ctv" class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-teal-200 relative overflow-hidden flex flex-col">
+            <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition">📺</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition">TV & CTV</h3>
+            <p class="text-gray-600 mb-6 flex-grow">
+              Accédez au mass média (TF1, M6) et à la TV Connectée. 
+              <br><span class="text-sm text-gray-400 mt-2 block">Brand Lift & Drive-to-Web inclus.</span>
+            </p>
+            <span class="text-indigo-600 font-bold flex items-center gap-2">Découvrir l'offre <span class="group-hover:translate-x-1 transition">→</span></span>
+         </a>
 
-        <div class="bg-teal-600 text-white p-8 rounded-3xl shadow-xl shadow-teal-200 hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group">
-          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-teal-500 rounded-full blur-3xl opacity-50"></div>
+         <a href="/solutions/ooh-dooh" class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-pink-200 relative overflow-hidden flex flex-col">
+            <div class="w-14 h-14 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition">🏙️</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-pink-600 transition">Affichage (DOOH)</h3>
+            <p class="text-gray-600 mb-6 flex-grow">
+              Visibilité urbaine, Gares et Métros. Ciblage "Sniper" basé sur la localisation GPS.
+              <br><span class="text-sm text-gray-400 mt-2 block">Retargeting mobile inclus.</span>
+            </p>
+            <span class="text-pink-600 font-bold flex items-center gap-2">Découvrir l'offre <span class="group-hover:translate-x-1 transition">→</span></span>
+         </a>
 
-          <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mb-6 text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-            </svg>
-          </div>
-          
-          <h3 class="text-2xl font-bold mb-4">Activation On + Off</h3>
-          <p class="text-teal-50 mb-6 leading-relaxed">
-            Notre rareté ? Maîtriser le mix média complet. Nous brisons les silos pour créer des campagnes qui marquent les esprits partout.
-          </p>
-          <ul class="space-y-3 text-sm font-medium text-teal-100">
-            <li class="flex items-center gap-3"><span class="text-white text-lg">✓</span> <strong>Offline :</strong> TV, OOH, Radio, Print</li>
-            <li class="flex items-center gap-3"><span class="text-white text-lg">✓</span> <strong>Digital :</strong> Social, VOL, Display, CTV</li>
-            <li class="flex items-center gap-3"><span class="text-white text-lg">✓</span> <strong>Local :</strong> SEO & Géomarketing</li>
-          </ul>
-        </div>
+         <a href="/solutions/social-vol" class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 relative overflow-hidden flex flex-col">
+            <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition">📱</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">Social Ads & VOL</h3>
+            <p class="text-gray-600 mb-6 flex-grow">
+              TikTok, Insta, YouTube. Des packs "Growth" incluant Création + Média pour baisser votre CAC.
+            </p>
+            <span class="text-blue-600 font-bold flex items-center gap-2">Découvrir l'offre <span class="group-hover:translate-x-1 transition">→</span></span>
+         </a>
 
-        <div class="bg-white p-8 rounded-3xl shadow-lg shadow-gray-100 border border-gray-50 hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group">
-          <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-            <span class="text-9xl font-bold text-teal-900">3</span>
-          </div>
-          
-          <div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center mb-6 text-teal-600">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
-          </div>
-          
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Trading & Performance</h3>
-          <p class="text-gray-600 mb-6 leading-relaxed">
-            Accédez à la puissance d'achat des grands, avec la souplesse d'un partenaire de proximité. Nous optimisons chaque euro investi.
-          </p>
-          <ul class="space-y-3 text-sm font-medium text-gray-500">
-            <li class="flex items-center gap-3"><span class="text-teal-500 text-lg">✓</span> Tarifs négociés (vs Big 5)</li>
-            <li class="flex items-center gap-3"><span class="text-teal-500 text-lg">✓</span> Accès inventaires Premium</li>
-            <li class="flex items-center gap-3"><span class="text-teal-500 text-lg">✓</span> Reporting transparent</li>
-          </ul>
-        </div>
+         <a href="/solutions/search-seo" class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-orange-200 relative overflow-hidden flex flex-col">
+            <div class="w-14 h-14 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition">🔍</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition">Search & SEO</h3>
+            <p class="text-gray-600 mb-6 flex-grow">
+              Google Ads et Référencement Local. Soyez le premier résultat quand on vous cherche.
+            </p>
+            <span class="text-orange-600 font-bold flex items-center gap-2">Découvrir l'offre <span class="group-hover:translate-x-1 transition">→</span></span>
+         </a>
+
+         <a href="/solutions/radio-audio" class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-teal-200 relative overflow-hidden flex flex-col">
+            <div class="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition">📻</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition">Radio & Audio</h3>
+            <p class="text-gray-600 mb-6 flex-grow">
+              Podcasts et Radio hertzienne. Entrez dans l'intimité de vos prospects.
+            </p>
+            <span class="text-teal-600 font-bold flex items-center gap-2">Découvrir l'offre <span class="group-hover:translate-x-1 transition">→</span></span>
+         </a>
+
+         <a href="/contact" class="group bg-gray-900 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-900 flex flex-col justify-center items-center text-center">
+            <span class="text-5xl mb-6 group-hover:scale-110 transition">🚀</span>
+            <h3 class="text-2xl font-bold text-white mb-2">Votre levier n'est pas là ?</h3>
+            <p class="text-gray-400 mb-6">
+              Nous faisons du sur-mesure. Discutons de votre besoin spécifique.
+            </p>
+            <span class="inline-block px-6 py-2 bg-white text-gray-900 rounded-full font-bold text-sm hover:bg-teal-500 hover:text-white transition-colors">
+                Contactez-nous
+            </span>
+         </a>
 
       </div>
-    </div>
-  </section>
-
-  <section class="bg-slate-50 py-20 border-t border-gray-100">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <p class="text-gray-500 uppercase tracking-widest font-bold text-xs mb-8">Nos terrains de jeu</p>
-      <div class="flex flex-wrap justify-center gap-3 md:gap-6">
-         <span class="px-6 py-3 bg-white rounded-xl shadow-sm text-gray-700 font-bold border border-gray-100">📺 TV & CTV</span>
-         <span class="px-6 py-3 bg-white rounded-xl shadow-sm text-gray-700 font-bold border border-gray-100">🏙️ OOH & DOOH</span>
-         <span class="px-6 py-3 bg-white rounded-xl shadow-sm text-gray-700 font-bold border border-gray-100">📱 Social Ads</span>
-         <span class="px-6 py-3 bg-white rounded-xl shadow-sm text-gray-700 font-bold border border-gray-100">🔍 Search (SEA)</span>
-         <span class="px-6 py-3 bg-white rounded-xl shadow-sm text-gray-700 font-bold border border-gray-100">📻 Radio / Audio</span>
-         <span class="px-6 py-3 bg-white rounded-xl shadow-sm text-gray-700 font-bold border border-gray-100">📍 SEO / GEO</span>
-         <span class="px-6 py-3 bg-white rounded-xl shadow-sm text-gray-700 font-bold border border-gray-100">📰 Presse / Print</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-gray-900 py-20 relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-900 to-gray-800"></div>
-    
-    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Prêt à scaler ?</h2>
-      <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-        Discutons de vos objectifs de croissance. Audit rapide et premières recommandations sans engagement.
-      </p>
-      <a href="/contact" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-5 px-12 rounded-full transition-all transform hover:scale-105 shadow-xl shadow-teal-500/20 text-lg">
-        Lancer mon projet
-      </a>
     </div>
   </section>
 

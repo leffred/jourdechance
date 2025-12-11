@@ -1,26 +1,81 @@
 ﻿---
 // Header.astro
 ---
-<header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
+<header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100 font-sans">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
       
       <a href="/" class="flex items-center gap-3 group">
-        <img src="/logo.png" alt="Logo Jour de Chance" class="h-12 w-auto transition-transform group-hover:scale-105" />
+        <img src="/logo.png" alt="Logo Jour de Chance" class="h-10 w-auto transition-transform group-hover:scale-105" />
         <span class="font-bold text-xl text-gray-900 tracking-tight hidden sm:block">
           Jour de <span class="text-teal-500">Chance</span>
         </span>
       </a>
 
       <nav class="hidden md:flex gap-8 items-center">
-        <a href="/" class="text-gray-600 hover:text-teal-500 font-medium transition-colors">Accueil</a>
-        <a href="/services" class="text-gray-600 hover:text-teal-500 font-medium transition-colors">Services</a>
-        <a href="/a-propos" class="text-gray-600 hover:text-teal-500 font-medium transition-colors">À Propos</a>
+        <a href="/" class="text-gray-600 hover:text-teal-600 font-medium transition-colors">Accueil</a>
+
+        <div class="relative group">
+            <button class="flex items-center gap-1 text-gray-600 group-hover:text-teal-600 font-medium transition-colors py-8">
+                Solutions
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            
+            <div class="absolute left-1/2 -translate-x-1/2 top-full w-64 bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-2">
+                <div class="flex flex-col">
+                    <a href="/solutions/tv-ctv" class="px-4 py-3 rounded-xl hover:bg-teal-50 flex items-center gap-3 group/item">
+                        <span class="text-xl">📺</span>
+                        <div>
+                            <span class="block text-sm font-bold text-gray-900 group-hover/item:text-teal-700">TV & CTV</span>
+                            <span class="block text-xs text-gray-500">Mass Média ciblé</span>
+                        </div>
+                    </a>
+                    <a href="/solutions/ooh-dooh" class="px-4 py-3 rounded-xl hover:bg-pink-50 flex items-center gap-3 group/item">
+                        <span class="text-xl">🏙️</span>
+                        <div>
+                            <span class="block text-sm font-bold text-gray-900 group-hover/item:text-pink-700">Affichage DOOH</span>
+                            <span class="block text-xs text-gray-500">Visibilité urbaine</span>
+                        </div>
+                    </a>
+                    <a href="/solutions/social-vol" class="px-4 py-3 rounded-xl hover:bg-blue-50 flex items-center gap-3 group/item">
+                        <span class="text-xl">📱</span>
+                        <div>
+                            <span class="block text-sm font-bold text-gray-900 group-hover/item:text-blue-700">Social & VOL</span>
+                            <span class="block text-xs text-gray-500">TikTok, Insta, YT</span>
+                        </div>
+                    </a>
+                    <a href="/solutions/search-seo" class="px-4 py-3 rounded-xl hover:bg-orange-50 flex items-center gap-3 group/item">
+                        <span class="text-xl">🔍</span>
+                        <div>
+                            <span class="block text-sm font-bold text-gray-900 group-hover/item:text-orange-700">Search & SEO</span>
+                            <span class="block text-xs text-gray-500">Google & Local</span>
+                        </div>
+                    </a>
+                    <a href="/solutions/radio-audio" class="px-4 py-3 rounded-xl hover:bg-teal-50 flex items-center gap-3 group/item">
+                        <span class="text-xl">📻</span>
+                        <div>
+                            <span class="block text-sm font-bold text-gray-900 group-hover/item:text-teal-700">Radio & Audio</span>
+                            <span class="block text-xs text-gray-500">Podcasts & Spot</span>
+                        </div>
+                    </a>
+                    <a href="/services" class="mt-2 border-t border-gray-100 px-4 py-3 text-center text-xs font-bold text-teal-600 hover:text-teal-700 hover:underline">
+                        Voir toute l'offre →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <a href="/a-propos" class="text-gray-600 hover:text-teal-600 font-medium transition-colors">L'Agence</a>
       </nav>
 
       <div class="flex items-center gap-4">
-        <a href="/contact" class="px-5 py-2.5 bg-teal-500 text-white rounded-full font-bold hover:bg-teal-600 transition-all shadow-md hover:shadow-lg text-sm">
-          Contactez-nous
+        <a href="/contact" class="px-5 py-2.5 bg-gray-900 text-white rounded-full font-bold hover:bg-teal-600 transition-all shadow-md hover:shadow-lg text-sm transform hover:-translate-y-0.5">
+          Demander un audit
+        </a>
+        <a href="/services" class="md:hidden p-2 text-gray-600">
+            <span class="text-2xl">☰</span>
         </a>
       </div>
 

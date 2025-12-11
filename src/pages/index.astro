@@ -1,40 +1,193 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Bientôt disponible | Jour de Chance" description="Le site Jour de Chance est en construction. Revenez bientôt pour découvrir nos nouveautés.">
-  <main class="min-h-screen flex items-center justify-center bg-gray-50 p-4">
-    
-    <div class="bg-white p-10 rounded-3xl shadow-2xl max-w-lg w-full text-center border border-gray-100 relative overflow-hidden">
-      
-      <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-teal-300 to-teal-500"></div>
+<Layout title="Jour de Chance | Agence Média pour Startups & Scale-ups" description="L'agence média agile qui connecte le Online et le Offline. TV, Affichage, Digital : changez d'échelle sans les lourdeurs des grandes agences.">
+  <Header />
 
-      <img src="/logo.png" alt="Logo Jour de Chance" class="mx-auto w-40 mb-8 rounded-2xl" />
-      
-      <span class="inline-block bg-teal-50 text-teal-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-6 border border-teal-100">
-        Prochainement
+  <section class="relative bg-slate-50 overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-40">
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-teal-200 rounded-full opacity-20 blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-blue-200 rounded-full opacity-20 blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-white border border-teal-100 text-teal-700 font-bold text-xs uppercase tracking-wide shadow-sm mb-8">
+        🚀 De Startup à Scale-up
       </span>
-
-      <h1 class="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-        Jour de <span class="text-teal-500">Chance</span>
+      
+      <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tight mb-8 leading-tight">
+        Ne laissez plus le hasard <br class="hidden md:block" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-700">décider de votre croissance.</span>
       </h1>
-
-      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-        Votre nouvelle dose de chance arrive bientôt. 
-        <br>Une expérience repensée pour vous.
+      
+      <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600 mb-10 leading-relaxed">
+        L'agence média 360° (On + Off) conçue pour la vitesse.
+        <br>TV, Métro, Réseaux Sociaux : activez les leviers des géants avec l'agilité d'une startup.
       </p>
 
-      <a
-        href="mailto:contact@jourdechance.com"
-        class="inline-block w-full sm:w-auto bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-8 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
-      >
-        Être notifié du lancement
-      </a>
-
-      <p class="text-sm text-gray-400 mt-10">
-        © 2025 Jour de Chance.
-      </p>
-
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-teal-600 hover:bg-teal-700 transition-all shadow-lg hover:shadow-teal-500/30 transform hover:-translate-y-1">
+          Lancer ma campagne
+        </a>
+        <a href="/services" class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-200 text-lg font-bold rounded-full text-gray-700 bg-white hover:border-teal-500 hover:text-teal-600 transition-all">
+          Découvrir nos solutions
+        </a>
+      </div>
+      
+      <div class="mt-12 pt-8 border-t border-gray-200/60 max-w-3xl mx-auto">
+        <p class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Expertises activables en 48h</p>
+        <div class="flex flex-wrap justify-center gap-6 grayscale opacity-60">
+            <span class="font-black text-xl">TV</span>
+            <span class="font-black text-xl">DOOH</span>
+            <span class="font-black text-xl">SOCIAL</span>
+            <span class="font-black text-xl">AUDIO</span>
+        </div>
+      </div>
     </div>
-  </main>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Trop gros pour le "Tout Digital",<br>Trop petits pour le "Big 5" ?</h2>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            C'est le paradoxe de la Scale-up. Vous avez besoin de sortir de Facebook/Google pour toucher le grand public (TV, Affichage), mais les grandes agences médias sont trop lentes, trop chères et ne comprennent pas votre urgence.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-12 w-12 rounded-xl bg-teal-100 text-teal-600 font-bold text-xl">⚡</div>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-bold text-gray-900">Agilité Radicale</h3>
+                <p class="text-gray-500">Des recommandations en jours, pas en mois. Un interlocuteur unique qui connaît votre business.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-12 w-12 rounded-xl bg-teal-100 text-teal-600 font-bold text-xl">💰</div>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-bold text-gray-900">Tarifs Compétitifs</h3>
+                <p class="text-gray-500">Accédez aux inventaires Premium (TF1, JCDecaux, Spotify) aux tarifs négociés, sans minimum d'achat exorbitant.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+            <div class="bg-gray-900 rounded-3xl p-8 shadow-2xl text-white transform rotate-2 hover:rotate-0 transition duration-500">
+                <div class="flex justify-between items-start mb-8">
+                    <div>
+                        <p class="text-teal-400 font-bold text-xs uppercase mb-1">Campagne Q1</p>
+                        <h3 class="text-2xl font-bold">Mix Média Hybride</h3>
+                    </div>
+                    <div class="bg-teal-500 px-3 py-1 rounded-full text-xs font-bold">En cours</div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1"><span>Notoriété (TV+OOH)</span> <span>+45%</span></div>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-teal-400 h-2 rounded-full" style="width: 45%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1"><span>Trafic Web (SEO+SEA)</span> <span>+120%</span></div>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-purple-400 h-2 rounded-full" style="width: 85%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1"><span>Coût d'Acquisition</span> <span>-30%</span></div>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="bg-blue-400 h-2 rounded-full" style="width: 30%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-slate-50 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Activez vos leviers de croissance</h2>
+      <p class="text-gray-500 max-w-2xl mx-auto mb-16">Une approche 360° pour ne laisser aucun canal inexploité.</p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <a href="/solutions/tv-ctv" class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-teal-100 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition"><span class="text-6xl">📺</span></div>
+            <div class="text-left">
+                <span class="inline-block p-3 bg-indigo-50 text-indigo-600 rounded-xl mb-4 text-2xl">📺</span>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">TV & TV Connectée</h3>
+                <p class="text-sm text-gray-500 mb-4">La puissance du Mass Média accessible dès 5k€.</p>
+                <span class="text-indigo-600 font-bold text-sm group-hover:underline">Découvrir →</span>
+            </div>
+        </a>
+
+        <a href="/solutions/ooh-dooh" class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-teal-100 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition"><span class="text-6xl">🏙️</span></div>
+            <div class="text-left">
+                <span class="inline-block p-3 bg-pink-50 text-pink-600 rounded-xl mb-4 text-2xl">🏙️</span>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Affichage (DOOH)</h3>
+                <p class="text-sm text-gray-500 mb-4">Soyez visible dans la rue, le métro et les gares.</p>
+                <span class="text-pink-600 font-bold text-sm group-hover:underline">Découvrir →</span>
+            </div>
+        </a>
+
+        <a href="/solutions/social-vol" class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-teal-100 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition"><span class="text-6xl">📱</span></div>
+            <div class="text-left">
+                <span class="inline-block p-3 bg-blue-50 text-blue-600 rounded-xl mb-4 text-2xl">📱</span>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Social & VOL</h3>
+                <p class="text-sm text-gray-500 mb-4">TikTok, Insta, YouTube : captez l'attention mobile.</p>
+                <span class="text-blue-600 font-bold text-sm group-hover:underline">Découvrir →</span>
+            </div>
+        </a>
+
+        <a href="/solutions/search-seo" class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-teal-100 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition"><span class="text-6xl">🔍</span></div>
+            <div class="text-left">
+                <span class="inline-block p-3 bg-orange-50 text-orange-600 rounded-xl mb-4 text-2xl">🔍</span>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Search & SEO</h3>
+                <p class="text-sm text-gray-500 mb-4">Ne perdez plus aucune recherche Google.</p>
+                <span class="text-orange-600 font-bold text-sm group-hover:underline">Découvrir →</span>
+            </div>
+        </a>
+
+        <a href="/solutions/radio-audio" class="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-teal-100 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition"><span class="text-6xl">📻</span></div>
+            <div class="text-left">
+                <span class="inline-block p-3 bg-teal-50 text-teal-600 rounded-xl mb-4 text-2xl">📻</span>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Radio & Podcast</h3>
+                <p class="text-sm text-gray-500 mb-4">Entrez dans le quotidien de vos cibles par la voix.</p>
+                <span class="text-teal-600 font-bold text-sm group-hover:underline">Découvrir →</span>
+            </div>
+        </a>
+
+        <a href="/services" class="group bg-gray-900 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-center items-center text-center">
+            <span class="text-4xl mb-4">🚀</span>
+            <h3 class="text-xl font-bold text-white mb-2">Voir tout le catalogue</h3>
+            <p class="text-sm text-gray-400">Découvrir notre méthode complète.</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-24 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-6">Prêt à changer d'échelle ?</h2>
+      <p class="text-xl text-gray-500 mb-10">
+        Discutons de vos objectifs. L'audit initial est gratuit et sans engagement.
+      </p>
+      <a href="/contact" class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold py-5 px-12 rounded-full transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg">
+        Contacter l'équipe
+      </a>
+      <p class="mt-6 text-sm text-gray-400">Réponse sous 24h ouvrées. Basé à Boulogne-Billancourt.</p>
+    </div>
+  </section>
+
+  <Footer />
 </Layout>
