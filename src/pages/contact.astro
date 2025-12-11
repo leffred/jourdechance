@@ -2,6 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+// RECUPERATION AUTOMATIQUE DE LA CLE DEPUIS LE FICHIER .ENV
+const access_key = import.meta.env.WEB3FORMS_ACCESS_KEY;
 ---
 
 <Layout title="Contactez-nous | Jour de Chance" description="Prenez rendez-vous avec la chance.">
@@ -46,11 +49,13 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <div class="mt-12 md:mt-0">
-             <p class="text-sm text-teal-200">
+             <p class="text-sm text-teal-200 mb-4">
                Suivez nos actualités :
              </p>
-             <div class="flex gap-4 mt-4 opacity-70">
-                <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center font-bold">In</div>
+             <div class="flex gap-4 opacity-90">
+                <a href="https://www.linkedin.com/company/jourdechance/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-teal-600 transition-all transform hover:scale-110 shadow-sm" title="Voir notre page LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h5.106v-8.383c0-4.591 5.491-4.962 5.354 0v8.383h4.981v-9.025c0-6.975-7.795-6.753-10.473-3.235v-2.738z"/></svg>
+                </a>
              </div>
           </div>
         </div>
@@ -59,7 +64,8 @@ import Footer from '../components/Footer.astro';
           
           <form id="form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
             
-            <input type="hidden" name="access_key" value="76e81a7d-6cfb-48f9-8e19-e08a13708f25">
+            <input type="hidden" name="access_key" value={access_key}>
+            
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
             <div>
