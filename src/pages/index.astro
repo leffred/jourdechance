@@ -39,33 +39,83 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <section class="py-24 bg-white border-b border-gray-100">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
-            Trop gros pour le "Tout Digital",<br>
-            <span class="text-teal-600">Trop petits pour le "Big 5" ?</span>
-        </h2>
-        <p class="text-xl text-gray-500 mb-16 leading-relaxed">
-            C'est le paradoxe de la Scale-up. Vous avez besoin de sortir de Facebook/Google pour toucher le grand public (TV, Affichage), mais les grandes agences médias sont trop lentes, trop chères et ne comprennent pas votre urgence.
-        </p>
+    <div class="max-w-5xl mx-auto px-4">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">Le Paradoxe de la Croissance</h2>
+            <p class="text-xl text-gray-500 max-w-3xl mx-auto">
+                À partir d'un certain stade de croissance, les solutions qui vous ont lancé deviennent votre plafond de verre.
+            </p>
+        </div>
 
-        <div class="grid md:grid-cols-2 gap-12">
-            <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 hover:shadow-lg transition-all duration-300">
-                <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto shadow-sm">⚡</div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Agilité Radicale</h3>
-                <p class="text-gray-600 leading-relaxed">Des recommandations en jours, pas en mois. Un interlocuteur unique qui connaît votre business sur le bout des doigts.</p>
-            </div>
-            <div class="bg-slate-50 p-8 rounded-3xl border border-gray-100 hover:shadow-lg transition-all duration-300">
-                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto shadow-sm">💰</div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Tarifs Compétitifs</h3>
-                <p class="text-gray-600 leading-relaxed">Accédez aux inventaires Premium (TF1, JCDecaux, Spotify) aux tarifs négociés, sans minimum d'achat exorbitant.</p>
+        <div class="relative bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200 shadow-inner">
+            
+            <div class="absolute bottom-12 left-12 right-12 h-1 bg-gray-200 rounded-full hidden md:block"></div>
+            <div class="absolute bottom-8 right-12 text-xs font-bold text-gray-400 uppercase tracking-widest hidden md:block">Budget Média -></div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-end relative z-10">
+                
+                <div class="flex flex-col items-center">
+                    <div class="w-full bg-white p-6 rounded-2xl border-2 border-dashed border-gray-300 text-center opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="text-4xl mb-2 grayscale">🐭</div>
+                        <h3 class="font-bold text-gray-600 mb-2">Agences Digitales</h3>
+                        <p class="text-xs text-gray-400 leading-snug">
+                            "On optimise vos Facebook Ads."
+                        </p>
+                        <ul class="text-left mt-4 space-y-2 text-xs text-gray-500">
+                            <li class="flex items-center gap-2"><span class="text-red-400">×</span> Pas de TV/Offline</li>
+                            <li class="flex items-center gap-2"><span class="text-red-400">×</span> Plafond de verre</li>
+                        </ul>
+                    </div>
+                    <div class="h-12 w-0.5 bg-gray-300 my-2 hidden md:block"></div>
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Trop Petit</span>
+                </div>
+
+                <div class="flex flex-col items-center transform md:-translate-y-4">
+                    <div class="relative w-full bg-gray-900 p-8 rounded-2xl border-4 border-teal-400 text-center shadow-2xl text-white">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-teal-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
+                            La Solution Scale-up
+                        </div>
+                        <div class="text-5xl mb-4">🍀</div>
+                        <h3 class="font-bold text-2xl mb-2">Jour de Chance</h3>
+                        <p class="text-sm text-gray-300 leading-snug mb-4">
+                            "On connecte la TV, le Métro et le Digital."
+                        </p>
+                        <ul class="text-left space-y-2 text-sm text-teal-100">
+                            <li class="flex items-center gap-2"><span class="text-teal-400">✓</span> Agilité Startup</li>
+                            <li class="flex items-center gap-2"><span class="text-teal-400">✓</span> Puissance Big 5</li>
+                            <li class="flex items-center gap-2"><span class="text-teal-400">✓</span> Tarifs Négociés</li>
+                        </ul>
+                    </div>
+                    <div class="h-16 w-0.5 bg-teal-500 my-2 hidden md:block"></div>
+                    <span class="text-sm font-extrabold text-teal-600 uppercase tracking-wide bg-teal-50 px-3 py-1 rounded-full">Votre Zone</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="w-full bg-white p-6 rounded-2xl border-2 border-dashed border-gray-300 text-center opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="text-4xl mb-2 grayscale">🦕</div>
+                        <h3 class="font-bold text-gray-600 mb-2">Le "Big 5"</h3>
+                        <p class="text-xs text-gray-400 leading-snug">
+                            "Veuillez patienter 3 semaines."
+                        </p>
+                        <ul class="text-left mt-4 space-y-2 text-xs text-gray-500">
+                            <li class="flex items-center gap-2"><span class="text-red-400">×</span> Trop lent</li>
+                            <li class="flex items-center gap-2"><span class="text-red-400">×</span> Trop cher</li>
+                            <li class="flex items-center gap-2"><span class="text-red-400">×</span> Vous êtes un "petit"</li>
+                        </ul>
+                    </div>
+                    <div class="h-12 w-0.5 bg-gray-300 my-2 hidden md:block"></div>
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Trop Gros</span>
+                </div>
+
             </div>
         </div>
+
     </div>
   </section>
 
   <section class="py-20 bg-slate-50 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 relative">
-        
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900">Ils ont changé d'échelle avec nous</h2>
         </div>
@@ -280,13 +330,8 @@ import Footer from '../components/Footer.astro';
         });
     }
 
-    function nextSlide() {
-        showSlide(currentSlide + 1);
-    }
-
-    function prevSlide() {
-        showSlide(currentSlide - 1);
-    }
+    function nextSlide() { showSlide(currentSlide + 1); }
+    function prevSlide() { showSlide(currentSlide - 1); }
 
     if (nextBtn && prevBtn) {
         nextBtn.addEventListener('click', () => { nextSlide(); resetAutoPlay(); });
@@ -297,13 +342,7 @@ import Footer from '../components/Footer.astro';
         startAutoPlay();
     }
 
-    function startAutoPlay() {
-        autoPlayInterval = setInterval(nextSlide, 6000);
-    }
-
-    function resetAutoPlay() {
-        clearInterval(autoPlayInterval);
-        startAutoPlay();
-    }
+    function startAutoPlay() { autoPlayInterval = setInterval(nextSlide, 6000); }
+    function resetAutoPlay() { clearInterval(autoPlayInterval); startAutoPlay(); }
   </script>
 </Layout>
