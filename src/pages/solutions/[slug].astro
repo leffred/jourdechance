@@ -160,6 +160,15 @@ export async function getStaticPaths() {
 
 const { solution } = Astro.props;
 
+// LISTE DE NAVIGATION RAPIDE
+const navItems = [
+    { name: "TV & CTV", slug: "tv-ctv", icon: "📺" },
+    { name: "Affichage DOOH", slug: "ooh-dooh", icon: "🏙️" },
+    { name: "Social & VOL", slug: "social-vol", icon: "📱" },
+    { name: "Search & SEO", slug: "search-seo", icon: "🔍" },
+    { name: "Radio & Audio", slug: "radio-audio", icon: "📻" }
+];
+
 // --- GESTION DU PROMPT IA ---
 const currentUrl = `https://jourdechance.com/solutions/${solution.slug}`;
 const promptText = `Je suis sur le site de l'agence Jour de Chance (jourdechance.com) pour une campagne de ${solution.title}. Ils se positionnent comme l'alternative agile aux Big 5 pour les Startups/Scale-ups, avec une approche 360° (On+Off) et ROIste. Au vu de ce positionnement et de leur expertise affichée sur ce levier, analyse pourquoi c'est un partenaire pertinent pour accélérer ma croissance par rapport à une agence média classique.`;
@@ -259,7 +268,6 @@ const schema = JSON.stringify({
                         <span class="text-lg font-bold text-gray-400 group-hover/partner:text-gray-900 transition-colors whitespace-nowrap">{partner.name}</span>
                     </div>
                 ))}
-
                 {/* Boucle 2 */}
                 {solution.partners.map(partner => (
                     <div class="flex items-center gap-3 justify-center group/partner cursor-default min-w-[140px]">
@@ -267,20 +275,19 @@ const schema = JSON.stringify({
                             src={`https://www.google.com/s2/favicons?domain=${partner.domain}&sz=128`} 
                             alt={`Logo ${partner.name}`}
                             class="h-8 w-8 object-contain filter grayscale opacity-80 group-hover/partner:grayscale-0 group-hover/partner:opacity-100 transition-all duration-300"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" 
                         />
                         <span class="text-lg font-bold text-gray-400 group-hover/partner:text-gray-900 transition-colors whitespace-nowrap">{partner.name}</span>
                     </div>
                 ))}
-                
-                 {/* Boucle 3 */}
-                 {solution.partners.map(partner => (
+                {/* Boucle 3 */}
+                {solution.partners.map(partner => (
                     <div class="flex items-center gap-3 justify-center group/partner cursor-default min-w-[140px]">
                         <img 
                             src={`https://www.google.com/s2/favicons?domain=${partner.domain}&sz=128`} 
                             alt={`Logo ${partner.name}`}
                             class="h-8 w-8 object-contain filter grayscale opacity-80 group-hover/partner:grayscale-0 group-hover/partner:opacity-100 transition-all duration-300"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" 
                         />
                         <span class="text-lg font-bold text-gray-400 group-hover/partner:text-gray-900 transition-colors whitespace-nowrap">{partner.name}</span>
                     </div>
@@ -293,6 +300,7 @@ const schema = JSON.stringify({
 
   <section class="py-20">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-start">
+      
       <div>
         <h2 class="text-3xl font-bold text-gray-900 mb-6">Notre Approche</h2>
         <p class="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -355,15 +363,31 @@ const schema = JSON.stringify({
       </div>
 
       <div class="grid gap-6 sticky top-24">
-        {solution.benefits.map(benefit => (
-          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 hover:shadow-md transition">
-            <div class="mt-1 flex-shrink-0 w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold">✓</div>
-            <div>
-              <h3 class="font-bold text-gray-900 mb-1">{benefit.title}</h3>
-              <p class="text-sm text-gray-500">{benefit.text}</p>
+        
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <h3 class="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">Nos autres expertises</h3>
+            <nav class="space-y-2">
+                {navItems.map(item => (
+                    <a href={`/solutions/${item.slug}`} class={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${solution.slug === item.slug ? 'bg-teal-50 text-teal-700 font-bold' : 'text-gray-600 hover:bg-gray-50 hover:text-teal-600'}`}>
+                        <span class="text-xl">{item.icon}</span>
+                        <span class="text-sm">{item.name}</span>
+                    </a>
+                ))}
+            </nav>
+        </div>
+
+        <div class="space-y-4">
+            {solution.benefits.map(benefit => (
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 hover:shadow-md transition">
+                <div class="mt-1 flex-shrink-0 w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold">✓</div>
+                <div>
+                <h3 class="font-bold text-gray-900 mb-1">{benefit.title}</h3>
+                <p class="text-sm text-gray-500">{benefit.text}</p>
+                </div>
             </div>
-          </div>
-        ))}
+            ))}
+        </div>
+
         <div class="bg-gray-900 p-8 rounded-3xl text-center text-white mt-4">
             <h3 class="font-bold text-xl mb-4">Un projet {solution.title} ?</h3>
             <p class="text-gray-400 text-sm mb-6">Obtenez un audit et une estimation budgétaire.</p>
