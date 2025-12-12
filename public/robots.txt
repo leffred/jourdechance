@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://jourdechance.com/sitemap-index.xml
+Sitemap: https://www.jourdechance.com/sitemap-index.xml
