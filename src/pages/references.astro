@@ -1,0 +1,123 @@
+﻿---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const cases = [
+  {
+    client: "Exploris",
+    title: "Le nouveau géant de l'expédition",
+    category: "Travel & Luxe",
+    metrics: "+45% Leads",
+    image: "🚢",
+    color: "from-blue-800 to-teal-900",
+    text: "blue",
+    link: "/cases/trailcards"
+  },
+  {
+    client: "Deblock",
+    title: "La banque encercle ses cibles",
+    category: "Fintech & Web3",
+    metrics: "30M+ Impressions",
+    image: "💳",
+    color: "from-gray-900 to-black",
+    text: "yellow",
+    link: "/cases/deblock"
+  },
+  {
+    client: "Essity",
+    title: "La reconquête du client final",
+    category: "FMCG & Data",
+    metrics: "CPA < 6€",
+    image: "🧻",
+    color: "from-pink-200 to-purple-300",
+    text: "pink",
+    link: "/cases/essity"
+  },
+  {
+    client: "Les P'tits Boss",
+    title: "Remplir une crèche avant l'ouverture",
+    category: "Local & Retail",
+    metrics: "100% Local",
+    image: "👶",
+    color: "from-orange-200 to-red-300",
+    text: "orange",
+    link: "/cases/lespetitsboss"
+  },
+  {
+    client: "Medical Professionals",
+    title: "Former l'élite médicale",
+    category: "Santé & EdTech",
+    metrics: "+50% Membres",
+    image: "🩺",
+    color: "from-cyan-200 to-teal-300",
+    text: "cyan",
+    link: "/cases/medical-professionals"
+  }
+];
+---
+
+<Layout title="Nos Réalisations | Jour de Chance" description="Découvrez comment nous aidons les startups et scale-ups à grandir.">
+  <Header />
+
+  <section class="bg-slate-50 py-24 border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <span class="inline-block py-1 px-3 rounded-full bg-teal-100 text-teal-700 text-xs font-bold tracking-wide uppercase mb-6">
+        Portfolio
+      </span>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+        Ils ont changé d'échelle<br>
+        <span class="text-teal-600">avec nous.</span>
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed mx-auto max-w-2xl">
+        De la Fintech au Retail, en passant par le Luxe et la Santé. 
+        Découvrez nos stratégies d'acquisition sur-mesure.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        {cases.map((cas) => (
+          <a href={cas.link} class="group relative rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col md:flex-row h-auto md:h-80">
+            
+            <div class={`w-full md:w-2/5 bg-gradient-to-br ${cas.color} flex items-center justify-center p-8 relative overflow-hidden`}>
+                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                <span class="text-6xl group-hover:scale-110 transition-transform duration-500">{cas.image}</span>
+            </div>
+
+            <div class="w-full md:w-3/5 p-8 flex flex-col justify-center bg-white">
+                <span class={`font-bold uppercase tracking-wider text-xs mb-2 block text-${cas.text}-600`}>{cas.category}</span>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">{cas.client}</h3>
+                <p class="text-gray-500 text-lg mb-6 line-clamp-2">{cas.title}</p>
+                
+                <div class="mt-auto flex items-center justify-between border-t border-gray-100 pt-6">
+                    <div>
+                        <span class="block text-xl font-black text-gray-900">{cas.metrics}</span>
+                        <span class="text-xs text-gray-400 uppercase font-bold">Performance</span>
+                    </div>
+                    <span class={`w-10 h-10 rounded-full flex items-center justify-center bg-${cas.text}-50 text-${cas.text}-600 group-hover:bg-${cas.text}-600 group-hover:text-white transition-all`}>
+                        ➔
+                    </span>
+                </div>
+            </div>
+          </a>
+        ))}
+
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-900 py-24 text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-white mb-6">Vous voulez être le prochain ?</h2>
+      <a href="/contact" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-10 rounded-full transition-all transform hover:-translate-y-1 shadow-lg">
+        Démarrer mon projet
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

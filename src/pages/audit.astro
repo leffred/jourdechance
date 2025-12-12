@@ -1,0 +1,117 @@
+﻿---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Audit Média Gratuit | Jour de Chance" description="Recevez une analyse experte de vos campagnes actuelles (Social Ads, SEA) et découvrez vos leviers de croissance inexploités.">
+  <Header />
+
+  <section class="bg-gradient-to-b from-slate-50 to-white py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div>
+        <span class="inline-block py-1 px-3 rounded-full bg-teal-100 text-teal-700 text-xs font-bold tracking-wide uppercase mb-6">
+          Offre limitée aux Startups & Scale-ups
+        </span>
+        <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+          Vos campagnes sont-elles prêtes pour <span class="text-teal-600">l'hyper-croissance ?</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          La plupart des comptes publicitaires gaspillent <strong>20% à 30%</strong> de leur budget à cause d'une structure défaillante ou d'un ciblage épuisé.
+        </p>
+        
+        <div class="space-y-6 mb-12">
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-white border border-gray-100 rounded-full flex items-center justify-center text-xl shadow-sm">🔍</div>
+                <div>
+                    <h3 class="font-bold text-gray-900">Analyse Structurelle</h3>
+                    <p class="text-sm text-gray-500">Vérification de votre setup technique (GTM, Pixel, Conversion API).</p>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-white border border-gray-100 rounded-full flex items-center justify-center text-xl shadow-sm">🎨</div>
+                <div>
+                    <h3 class="font-bold text-gray-900">Revue Créative</h3>
+                    <p class="text-sm text-gray-500">Vos publicités sont-elles "Ad fatigue proof" ? Analyse de vos CTR.</p>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-white border border-gray-100 rounded-full flex items-center justify-center text-xl shadow-sm">🚀</div>
+                <div>
+                    <h3 class="font-bold text-gray-900">Potentiel de Scale</h3>
+                    <p class="text-sm text-gray-500">Identification des leviers inexploités (TikTok, TV Segmentée, DOOH).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-6 bg-slate-100 rounded-2xl border border-slate-200">
+            <p class="text-sm text-slate-600 italic">
+                "Cet audit nous a permis de réduire notre CPA de 15% dès le premier mois en coupant les audiences qui ne convertissaient pas."
+            </p>
+            <div class="mt-4 flex items-center gap-3">
+                <div class="w-8 h-8 bg-slate-300 rounded-full flex items-center justify-center text-xs">👤</div>
+                <span class="text-xs font-bold text-slate-900">CMO, Fintech Série A</span>
+            </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">Demander mon Audit</h2>
+        <p class="text-sm text-gray-500 mb-8">Gratuit, confidentiel et sans engagement.</p>
+
+        <form name="audit" method="POST" data-netlify="true" class="space-y-5">
+            
+            <input type="hidden" name="subject" value="NOUVEAU LEAD : Demande d'Audit" />
+
+            <div>
+                <label for="url" class="block text-sm font-medium text-gray-700 mb-1">Site Web à auditer</label>
+                <input type="url" name="url" id="url" required placeholder="https://votre-startup.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition outline-none">
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="firstname" class="block text-sm font-medium text-gray-700 mb-1">Prénom</label>
+                    <input type="text" name="firstname" id="firstname" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition outline-none">
+                </div>
+                <div>
+                    <label for="lastname" class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
+                    <input type="text" name="lastname" id="lastname" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition outline-none">
+                </div>
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email professionnel</label>
+                <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition outline-none">
+            </div>
+
+            <div>
+                <label for="budget" class="block text-sm font-medium text-gray-700 mb-1">Budget Média Mensuel Actuel</label>
+                <select name="budget" id="budget" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition outline-none bg-white">
+                    <option value="launch">Moins de 5k€ / mois</option>
+                    <option value="growth">Entre 5k€ et 20k€ / mois</option>
+                    <option value="scale" selected>Entre 20k€ et 100k€ / mois</option>
+                    <option value="lead">Plus de 100k€ / mois</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="challenges" class="block text-sm font-medium text-gray-700 mb-1">Votre principal défi actuel</label>
+                <textarea name="challenges" id="challenges" rows="3" placeholder="Ex: Mon CPA augmente, je veux faire de la TV..." class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition outline-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                Analyser ma croissance ➔
+            </button>
+            
+            <p class="text-xs text-center text-gray-400 mt-4">
+                Vos données sont protégées. En cliquant, vous acceptez notre <a href="/confidentialite" class="underline hover:text-teal-600">politique de confidentialité</a>.
+            </p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
